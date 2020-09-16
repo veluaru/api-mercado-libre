@@ -1,27 +1,30 @@
 <template>
   <div id="app">
     <v-app>
-        <ToolBar/>
-        <main>
-          <v-container>
-            <Search/>
-          </v-container>
-        </main>
+      <v-app-bar
+        absolute
+        color="blue lighten-1"
+        dark
+        scroll-target="#scrolling-techniques-7"
+        app
+      >
+        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+        <v-toolbar-title>La tienda de Angie</v-toolbar-title>
+      </v-app-bar>
+      <main>
+        <v-content>
+          <router-view></router-view>
+        </v-content>
+      </main>
     </v-app>
   </div>
 </template>
 
 <script>
-import ToolBar from "./components/Toolbar";
-import Search from "./components/Search";
-
 export default {
   name: "App",
 
-  components: {
-    ToolBar,
-    Search,
-  },
+  components: {},
 
   data: () => ({
     //
