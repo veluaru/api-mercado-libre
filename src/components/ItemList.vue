@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <v-row>
-      <v-col v-bind:key="dato.id" v-for="dato in datos" cols="12" sm="3">
-        <ItemCard v-bind:dato="dato" />
+      <v-col v-bind:key="item.id" v-for="item in items" cols="12" sm="3">
+        <ItemCard v-bind:item="item" />
       </v-col>
     </v-row>
   </v-container>
@@ -10,6 +10,7 @@
 
 
 <script>
+
 import ItemCard from "./ItemCard";
 
 export default {
@@ -17,6 +18,7 @@ export default {
   components: {
     ItemCard,
   },
-  props: ["datos"],
+  props: ["items"],
+  
 };
 </script>

@@ -26,7 +26,10 @@ export default new Router({
         {
             path: '/Details',
             name: 'Details',
-            component: Details
+            component: Details,
+            props: (route) => ({
+                ...route.params
+            })  
         },
     ]
   })
